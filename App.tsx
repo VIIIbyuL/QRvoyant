@@ -13,6 +13,8 @@ export default function App() {
 
       {/* QR camera component */}
       <Scanner />
+      {/* NAV bar */}
+      
     </View>
   );
 }
