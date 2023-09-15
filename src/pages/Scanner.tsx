@@ -24,9 +24,11 @@ export default function App() {
   }
 
   function toggleCameraType() {
-    setType((current) =>
-      current === CameraType.back ? CameraType.front : CameraType.back
-    );
+    if (type === CameraType.back) {
+      setType(CameraType.front);
+    } else {
+      setType(CameraType.back);
+    }
   }
 
   return (
@@ -44,18 +46,19 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
+    width: 300,
+    height: 300,
   },
   camera: {
     flex: 1,
     aspectRatio: 1,
+    width: "100%",
   },
   buttonContainer: {
     flex: 1,
     flexDirection: "row",
     backgroundColor: "transparent",
-    margin: 64,
+    marginBottom: 10,
   },
   button: {
     flex: 1,
