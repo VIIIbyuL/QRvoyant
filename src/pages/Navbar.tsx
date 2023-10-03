@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   buttonText: {
-    color: "white", // Button text color
+    color: "white",
     fontWeight: "bold",
   },
 });
