@@ -2,7 +2,9 @@ import { BarCodeScanner } from "expo-barcode-scanner";
 import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 
-export default function App() {
+
+
+export default function Scanner() {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
   const [scanned, setScanned] = useState(false);
 

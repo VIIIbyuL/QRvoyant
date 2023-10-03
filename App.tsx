@@ -1,11 +1,14 @@
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { Button } from "react-native-elements";
 
 import Navbar from "./src/pages/Navbar";
 import Scanner from "./src/pages/Scanner";
 
 export default function App() {
+  const stack = createStackNavigator();
+
   return (
     <View style={styles.container}>
       <View style={styles.logo}>
@@ -14,13 +17,18 @@ export default function App() {
       {/* <Text>Open up App.tsx to start working on your app!</Text> */}
       <StatusBar style="auto" />
       {/* <Button title="chat is this real" /> */}
-
       {/* QR camera component */}
       <Scanner />
-
       {/* NAV bar */}
       <Navbar />
     </View>
+    // <NavigationContainer>
+    //   <stack.Navigator>
+    //     <stack.Screen name="Scanner" component={Scanner} />
+    //     <Text>toyoyotoyoyo</Text>
+    //     {/* Stack screen for otehr */}
+    //   </stack.Navigator>
+    // </NavigationContainer>
   );
 }
 
