@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Text } from "react-native-elements";
 
 import HomePage from "./src/pages/HomePage";
+import SearchPage from "./src/pages/SearchPage";
 
 export default function App() {
   const stack = createStackNavigator();
@@ -11,7 +12,7 @@ export default function App() {
     <NavigationContainer>
       <stack.Navigator>
         <stack.Screen name="HomePage" component={HomePage} />
-        <Text>toyoyotoyoyo</Text>
+        <stack.Screen name="SearchPage" component={SearchPage} />
         {/* Stack screen for other screens */}
       </stack.Navigator>
     </NavigationContainer>

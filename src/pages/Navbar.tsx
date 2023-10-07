@@ -1,13 +1,28 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 export default function Navbar() {
+  const navigation = useNavigation<{
+    navigate: (screenName: string) => void;
+  }>();
+
+  const navigateToScreen = (screenName: string) => {
+    navigation.navigate(screenName); // Navigate to the specified screen
+  };
+
   return (
     <View style={styles.navbar}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigateToScreen("HomePage")} // Replace with the actual screen name
+      >
         <Text style={styles.buttonText}>Home</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigateToScreen("SearchPage")} // Replace with the actual screen name
+      >
         <Text style={styles.buttonText}>Search</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
