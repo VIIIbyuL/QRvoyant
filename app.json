@@ -43,9 +43,6 @@
           "cameraPermission": "Allow QRvoyant to access your camera."
         }
       ]
-    ],
-    "extra": {
-      "CLERK_PUBLISHABLE_KEY": "pk_test_dGhvcm91Z2gtc25ha2UtNTQuY2xlcmsuYWNjb3VudHMuZGV2JA"
-    }
+    ]
   }
 }
